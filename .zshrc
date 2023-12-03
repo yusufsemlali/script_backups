@@ -17,7 +17,7 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/M365Prin
 
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias francinette="$HOME/francinette/tester.sh"
-alias cleaks="$HOME/leaks_check.sh"
+alias cleaks="$HOME/script_backups/leaks_check.sh"
 alias ls='ls -a'
 alias rmr='rm -rf'
 alias rmf='rm -f'
@@ -28,7 +28,15 @@ function gcc_includes() {
     cc -H $1 2>&1 | grep '^\.\s'
 }
 
+function start_fswatch() {
+    if [ ! -f "/tmp/fswatch_started" ]; then
+        touch /tmp/fswatch_started
+        fswatch -o ~/.zshrc script_backups/ | xargs -n1 -I{} sh script_backup.sh
+    fi
+}
+
 alias cci=gcc_includes
+alias startfsw=start_fswatch
 alias paco="$HOME/francinette/tester.sh"
 export PYTHONPATH=~/local/bin/python3
 alias format='python3 -m c_formatter_42'
