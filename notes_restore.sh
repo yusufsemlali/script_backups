@@ -2,8 +2,9 @@
 # Restore script
 
 # Define the source and destination paths
-SOURCE="/path/to/your/repo/NoteStore.sqlite"
-DEST="/Users/<your_username>/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
+DEST="~/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
+SOURCE="~/notes_backup/NoteStore.sqlite"
+
 
 # Navigate to your repo
 cd /path/to/your/repo
