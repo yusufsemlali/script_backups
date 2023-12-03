@@ -1,17 +1,16 @@
 #!/bin/bash
-# Restore script
+# This script will pull the latest backup from GitHub and restore it
 
-# Define the source and destination paths
-SOURCE="~/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
-DEST="~/notes_backup/NoteStore.sqlite"
+DEST_FILE="/Users/ysemlali/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
+BACKUP_DIR="/Users/ysemlali/notes_backup"
 
+# Change to the GitHub repo directorcd "$REPO_DIR"
+cd "$BACKUP_DIR"
+# Pull the latest changes from GitHub
+git pull origin main
 
-# Navigate to your repo
-cd /path/to/your/repo
+# Copy the backup file to the original location
+cp "$BACKUP_DIR/NoteStore.sqlite" "$DEST_FILE"
 
-# Pull the latest changes
-git pull
-
-# Copy the file
-cp $SOURCE $DEST
+echo "Notes restored from GitHub backup!"
 
