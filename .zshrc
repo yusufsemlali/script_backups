@@ -28,7 +28,7 @@ function gcc_includes() {
     cc -H $1 2>&1 | grep '^\.\s'
 }
 
-function start_fswatch() {
+function fsw() {
         sh /Users/ysemlali/script_backup.sh
 }
 
