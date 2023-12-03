@@ -36,7 +36,7 @@ function start_fswatch() {
 }
 
 alias cci=gcc_includes
-alias startfsw=start_fswatch
+alias fsw=start_fswatch
 alias paco="$HOME/francinette/tester.sh"
 export PYTHONPATH=~/local/bin/python3
 alias format='python3 -m c_formatter_42'
