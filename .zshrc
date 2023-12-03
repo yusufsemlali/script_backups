@@ -17,7 +17,7 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/M365Prin
 
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias francinette="$HOME/francinette/tester.sh"
-alias cleaks="$HOME/script_backups/leaks_check.sh"
+alias cleaks="$HOME/ysf_scripts/leaks_check.sh"
 alias ls='ls -a'
 alias rmr='rm -rf'
 alias rmf='rm -f'
