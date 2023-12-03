@@ -29,7 +29,7 @@ function gcc_includes() {
 }
 
 function start_fswatch() {
-        h /Users/ysemlali/script_backup.sh
+        sh /Users/ysemlali/script_backup.sh
 }
 
 
