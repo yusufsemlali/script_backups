@@ -22,6 +22,7 @@ function gcc_includes() {
 function fsw() {
     sh /Users/ysemlali/script_backup.sh
 }
+
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias francinette="$HOME/francinette/tester.sh"
 alias cleaks="$HOME/ysf_scripts/leaks_check.sh"
