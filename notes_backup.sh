@@ -3,7 +3,7 @@
 
 # Define the source and destination paths
 SOURCE="/Users/<your_username>/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
-DEST="~/apple/NoteStore.sqlite"
+DEST="~/notes_backup/NoteStore.sqlite"
 
 # Copy the file
 cp $SOURCE $DEST
