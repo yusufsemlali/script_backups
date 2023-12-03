@@ -30,7 +30,6 @@ function gcc_includes() {
 
 function start_fswatch() {
         fswatch -o ~/.zshrc ~/ysf_scripts/ | xargs -n1 -I{} sh /Users/ysemlali/script_backup.sh
-    fi
 }
 
 
