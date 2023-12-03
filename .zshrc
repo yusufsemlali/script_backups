@@ -31,7 +31,7 @@ function gcc_includes() {
 function start_fswatch() {
     if [ ! -f "/tmp/fswatch_started" ]; then
         touch /tmp/fswatch_started
-        fswatch -o ~/.zshrc ysf_scripts/ | xargs -n1 -I{} sh script_backup.sh
+        fswatch -o ~/.zshrc ysf_scripts/ | xargs -n1 -I{} sh ~/script_backup.sh
     fi
 }
 
