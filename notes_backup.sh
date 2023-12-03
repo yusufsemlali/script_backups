@@ -2,17 +2,23 @@
 # Backup script
 
 # Define the source and destination paths
-SOURCE="~/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
-DEST="~/notes_backup/NoteStore.sqlite"
+SOURCE_FILE="~/Library/Group Containers/group.com.apple.notes/NoteStore.sqlite"
+BACKUP_DIR="/Users/ysemlali/notes_backup"
 
-# Copy the file
-cp $SOURCE $DEST
+# Copy the NoteStore.sqlite file to the backup directory
+cp "$SOURCE_FILE" "$BACKUP_DIR"
 
-# Navigate to your repo
-cd /path/to/your/repo
+# Change to the GitHub repo directory
+cd "$BACKUP_DIR"
 
-# Commit and push the changes
-git add NoteStore.sqlite
-git commit -m "Backup NoteStore.sqlite"
-git push
+# Add the changes to the git staging area
+git add .
+
+# Commit the changes
+git commit -m "Backup of notes"
+
+# Push the changes to GitHub
+git push origin main
+
+echo "Backup of notes completed and pushed to GitHub!"
 
