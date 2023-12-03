@@ -15,6 +15,13 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/M365Princess.omp.json)"
 
+function gcc_includes() {
+    cc -H $1 2>&1 | grep '^\.\s'
+}
+
+function fsw() {
+    sh /Users/ysemlali/script_backup.sh
+}
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias francinette="$HOME/francinette/tester.sh"
 alias cleaks="$HOME/ysf_scripts/leaks_check.sh"
@@ -24,13 +31,6 @@ alias rmf='rm -f'
 alias c='clear'
 alias ccw='cc -Wall -Werror -Wextra'
 
-function gcc_includes() {
-    cc -H $1 2>&1 | grep '^\.\s'
-}
-
-function fsw() {
-    sh /Users/ysemlali/script_backup.sh
-}
 
 
 alias cci=gcc_includes
