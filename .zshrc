@@ -43,5 +43,3 @@ export PYTHONPATH=~/local/bin/python3
 alias format='python3 -m c_formatter_42'
 source ~/.42-wizzard.sh
 zsh ~/.42-wizzard-updater.sh
-
-
