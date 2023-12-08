@@ -12,6 +12,7 @@ export PATH="/Users/ysemlali/goinfre/homebrew/bin:$(brew --prefix)/bin:$(brew --
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source /Users/ysemlali/ysf_scripts/valgrind_utils.sh
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/M365Princess.omp.json)"
 
@@ -27,7 +28,7 @@ alias notes_r="/Users/ysemlali/ysf_scripts/notes_restore.sh"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias francinette="$HOME/francinette/tester.sh"
 alias cleaks="$HOME/ysf_scripts/leaks_check.sh"
-alias ls='ls -a'
+alias lls='ls -a'
 alias rmr='rm -rf'
 alias rmf='rm -f'
 alias c='clear'
@@ -38,3 +39,6 @@ export PYTHONPATH=~/local/bin/python3
 alias format='python3 -m c_formatter_42'
 source ~/.42-wizzard.sh
 zsh ~/.42-wizzard-updater.sh
+
+
+#hello world , this is a test

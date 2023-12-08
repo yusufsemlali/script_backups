@@ -7,7 +7,7 @@ BACKUP_DIR="/Users/ysemlali/notes_backup"
 # Change to the GitHub repo directorcd "$REPO_DIR"
 cd "$BACKUP_DIR"
 # Pull the latest changes from GitHub
-git pull origin main
+git pull
 
 # Copy the backup file to the original location
 cp "$BACKUP_DIR/NoteStore.sqlite" "$DEST_FILE"
