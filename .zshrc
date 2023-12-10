@@ -32,7 +32,6 @@ alias lls='ls -a'
 alias rmr='rm -rf'
 alias rmf='rm -f'
 alias c='clear'
-alias ccw='cc -Wall -Werror -Wextra'
 alias cci=gcc_includes
 alias paco="$HOME/francinette/tester.sh"
 export PYTHONPATH=~/local/bin/python3
