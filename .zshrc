@@ -1,24 +1,22 @@
+# Author: Yusuf Semlali
 if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
     cd /Users/ysemlali/Desktop
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Users/ysemlali/goinfre/homebrew/bin:$PATH"
+export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+export PATH=
 
-# Define PATH
-export PATH="/Users/ysemlali/goinfre/homebrew/bin:$(brew --prefix)/bin:$(brew --prefix oh-my-posh)/bin:$HOME/goinfre/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:$PATH"
+# theme for oh-my-posh
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-source /Users/ysemlali/ysf_scripts/valgrind_utils.sh
 
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/M365Princess.omp.json)"
 
 function gcc_includes() {
     cc -H $1 2>&1 | grep '^\.\s'
-}
+
 
 function fsw() {
     sh /Users/ysemlali/script_backup.sh
@@ -32,12 +30,11 @@ alias lls='ls -a'
 alias rmr='rm -rf'
 alias rmf='rm -f'
 alias c='clear'
+alias ccw='cc -Wall -Wextra -Werror'
 alias cci=gcc_includes
 alias paco="$HOME/francinette/tester.sh"
 export PYTHONPATH=~/local/bin/python3
 alias format='python3 -m c_formatter_42'
-source ~/.42-wizzard.sh
-zsh ~/.42-wizzard-updater.sh
 
 
-#hello world , this is a test
+export PATH=~/goinfre/homebrew/bin:/Users/ysemlali/goinfre/homebrew/bin:/Users/ysemlali/goinfre/homebrew/bin:/goinfre/ysemlali/homebrew/bin/brew:/goinfre/ysemlali/homebrew/homebrew/Library/Homebrew:/goinfre/ysemlali/homebrew/homebrew/Library/Homebrew:/goinfre/ysemlali/homebrew/bin:/goinfre/ysemlali/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ysemlali/goinfre/homebrew/bin:/Users/ysemlali/goinfre/homebrew/opt/oh-my-posh/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
