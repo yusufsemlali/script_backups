@@ -18,14 +18,6 @@ export PATH=~/Library/Mobile\ Documents/com~apple~CloudDocs/homebrew/bin:/Users/
 export PATH="$PATH:~/Library/Mobile Documents/com~apple~CloudDocs"
 
 
-function gcc_includes() {
-    cc -H $1 2>&1 | grep '^\.\s'
-}
-function script_b() {
-    sh /Users/ysemlali/script_backup.sh
-}
-
-
 #aliases
 alias script_b="sh /Users/ysemlali/script_backup.sh"
 alias notes_b="/Users/ysemlali/ysf_scripts/notes_backup.sh"
