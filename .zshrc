@@ -27,6 +27,7 @@ function script_b() {
 
 
 #aliases
+alias script_b="sh /Users/ysemlali/script_backup.sh"
 alias notes_b="/Users/ysemlali/ysf_scripts/notes_backup.sh"
 alias notes_r="/Users/ysemlali/ysf_scripts/notes_restore.sh"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
@@ -37,7 +38,7 @@ alias rmr='rm -rf'
 alias rmf='rm -f'
 alias c='clear'
 alias ccw='cc -Wall -Wextra -Werror'
-alias cci=gcc_includes
+alias cci="ccw -H $1 2>&1 | grep '^\.\s"
 alias paco="$HOME/francinette/tester.sh"
 alias format='python3 -m c_formatter_42'
 export PYTHONPATH=~/local/bin/python3
