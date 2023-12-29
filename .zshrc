@@ -21,7 +21,7 @@ export PATH="$PATH:~/Library/Mobile Documents/com~apple~CloudDocs"
 function gcc_includes() {
     cc -H $1 2>&1 | grep '^\.\s'
 }
-function fsw() {
+function script_b() {
     sh /Users/ysemlali/script_backup.sh
 }
 
