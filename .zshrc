@@ -30,9 +30,11 @@ alias rmr='rm -rf'
 alias rmf='rm -f'
 alias c='clear'
 alias ccw='cc -Wall -Wextra -Werror'
-alias cci="ccw -H $1 2>&1 | grep '^\.\s"
 alias paco="$HOME/francinette/tester.sh"
 alias format='python3 -m c_formatter_42'
+cci(){
+	ccw "$1" -H 2>&1 | grep -E '^\.\.?\s'
+}
 export PYTHONPATH=~/local/bin/python3
 
 #defaults 
@@ -41,6 +43,9 @@ defaults write -g InitialKeyRepeat -int 10 # Set delay until key repeat starts t
 defaults write -g ApplePersistence -bool no # Prevent apps from re-opening at startup
 brightness 1
 source ~/.42-wizzard.sh
+
+message="Hello, World! 👋"
+
 
 
 
