@@ -16,6 +16,7 @@ source $ZSH/oh-my-zsh.sh
 # homebrew path & cloud path
 export PATH=~/Library/Mobile\ Documents/com~apple~CloudDocs/homebrew/bin:/Users/ysemlali/goinfre/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/goinfre/ysemlali/homebrew/bin:/Users/ysemlali/goinfre/homebrew/bin
 export PATH="$PATH:~/Library/Mobile Documents/com~apple~CloudDocs"
+export PATH="$HOME/homebrew/bin:$PATH"
 
 
 #aliases
@@ -33,7 +34,7 @@ alias ccw='cc -Wall -Wextra -Werror'
 alias paco="$HOME/francinette/tester.sh"
 alias format='python3 -m c_formatter_42'
 cci(){
-	ccw "$1" -H 2>&1 | grep -E '^\.\.?\s'
+        ccw "$1" -H 2>&1 | grep -E '^\.\.?\s'
 }
 export PYTHONPATH=~/local/bin/python3
 
@@ -42,10 +43,8 @@ defaults write -g KeyRepeat -int 1 # Set key repeat speed to fastest
 defaults write -g InitialKeyRepeat -int 10 # Set delay until key repeat starts to shortest
 defaults write -g ApplePersistence -bool no # Prevent apps from re-opening at startup
 brightness 1
-source ~/.42-wizzard.sh
 
 message="Hello, World! 👋"
 
-
-
-
+source ~/.42-wizzard.sh
+zsh ~/.42-wizzard-updater.sh
